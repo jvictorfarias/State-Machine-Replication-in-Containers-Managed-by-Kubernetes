@@ -1,0 +1,9 @@
+\begin{thebibliography}{}
+
+\bibitem[Netto et~al. 2017]{netto2017state}
+Netto, H.~V., Lung, L.~C., Correia, M., Luiz, A.~F., and de~Souza, L. M.~S.
+  (2017).
+\newblock State machine replication in containers managed by kubernetes.
+\newblock {\em Journal of Systems Architecture}, 73:53--59.
+
+\end{thebibliography}

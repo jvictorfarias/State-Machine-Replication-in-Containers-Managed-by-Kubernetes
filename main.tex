@@ -37,21 +37,11 @@
 \maketitle
 
 \begin{abstract}
-  This meta-paper describes the style to be used in articles and short papers
-  for SBC conferences. For papers in English, you should add just an abstract
-  while for the papers in Portuguese, we also ask for an abstract in
-  Portuguese (``resumo''). In both cases, abstracts should not have more than
-  10 lines and must be in the first page of the paper.
+  
 \end{abstract}
      
 \begin{resumo} 
-  Este meta-artigo descreve o estilo a ser usado na confecção de artigos e
-  resumos de artigos para publicação nos anais das conferências organizadas
-  pela SBC. É solicitada a escrita de resumo e abstract apenas para os artigos
-  escritos em português. Artigos em inglês deverão apresentar apenas abstract.
-  Nos dois casos, o autor deve tomar cuidado para que o resumo (e o abstract)
-  não ultrapassem 10 linhas cada, sendo que ambos devem estar na primeira
-  página do artigo.
+  Este meta-artigo se caracteriza por um breve resumo explicativo sobre o artigo cujo tema é exposto no título do documento. Contêineres possuem grande capacidade de escalabilidade horizontal, e isso decorre principalmente de sua ferramenta de gerenciamento mais comumente usada, que é o Kubernetes. Esta ferramenta possibilita o provisionamento de recursos e replicação de contêineres baseado na demanda das aplicações que utilizam o serviço, criando balanceamento de carga tanto para o acesso aos recursos, quanto para os serviços de rede. O artigo explicita um dos problemas em contêineres, que é a replicação dos seus estados atuais, pois quando um contêiner novo é instanciado ou duplicado, seu estado é totalmente perdido, espelhando as configurações e aplicações do contêiner espelhado, mas sem replicar o estado em que o outro estava. No artigo, o autor propõe uma arquitetura para a integração de um protocolo de replicação de estados, além de propor o protocolo em si. A arquitetura é montada de maneira que os estados dos contêineres são gerenciados através do módulo de memória compartilhada do Kubernetes, o \textit{etcd}, esse módulo tem acesso a memória compartilhada de todos os containers do cluster, tornando possível a implementação de um protocolo que faça o gerenciamento dos nós da arquitetura. Logo em seguida, o autor também propõe a criação do protocolo de controle de replicação, onde cria a hipótese de que os contêineres necessitam de \textit{k + 1} réplicas para garantir que em caso de falhas, sempre haja um substituto para sua execução. Com a criação dessa hipótese, é criado um algoritmo de eleição de líderes dentre os contêineres que precisam ser replicados, a fim de que esse líder só responda a requisição quando o estado dele for replicado ao menos \textit{k + 1} vezes. A partir desse cenário, ele inicia os testes e valida a replicação dos estados, contribuindo de forma a criar uma proposta de integração a atual arquitetura do Kubernetes.\cite{netto2017state}
 \end{resumo}
 
 
